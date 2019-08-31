@@ -2,7 +2,7 @@ function sendContact(){
     name = document.getElementById('name').value;
     msg = document.getElementById('message').value;
     contact = document.getElementById('cnt').value;
-    alert(name+msg+contact)
+    
     if(name&&msg&&contact){
         axios.defaults.headers.common['appID'] = 'kafilatest11567282175515'
         axios.post('contact/save',{
@@ -13,6 +13,10 @@ function sendContact(){
         })
         .then(res=>{
             console.log(res)
+            document.getElementById('name').value="";
+    document.getElementById('message').value="";
+    document.getElementById('cnt').value="";
+            window.location.href='/kafila';
         })
         .catch(e=>{
             console.log(e)

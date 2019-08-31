@@ -5,7 +5,7 @@ function sendContact(){
     
     if(name&&msg&&contact){
         axios.defaults.headers.common['appID'] = 'kafilatest11567282175515'
-        axios.post('contact/save',{
+        axios.post('/contact/save',{
             name:name,
             message:msg,
             phone:contact,

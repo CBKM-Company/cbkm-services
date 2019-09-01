@@ -12,7 +12,7 @@
         //axios.get('contact/ava').then(res => { console.log(res.data) })
        function getReg(){
         axios.defaults.headers.common['appID'] = 'kafilatest11567282175515'
-        axios.get('/kafila/register/getall')
+        axios.get('/register/getall')
         .then(res=>{
             console.log(res.data.data)
             str=''

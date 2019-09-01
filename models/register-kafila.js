@@ -18,6 +18,13 @@ const regiterKafilaSchema = mongoose.Schema({
     getToKnow: {
         type: String,
     },
+    university: {
+        type: String,
+    },
+    tripID: {
+        type: String,
+        required: true,
+    },
     appID: {
         required: true,
         type: String,

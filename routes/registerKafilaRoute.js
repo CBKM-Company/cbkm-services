@@ -20,8 +20,9 @@ app.get('/getall',userAuth, (req, res) => {
 app.post('/save',userAuth, (req, res) => {
     (async () => {
         try {
-            registerPromise = await registerServices.saveContact(req.body);
-            res.json({ success: true, data: registerPromise })
+            //registerPromise = await registerServices.saveContact(req.body);
+            //res.json({ success: true, data: registerPromise })
+            console.log(req.body)
         }
         catch (e) {
             console.log(e)

@@ -1,7 +1,7 @@
 const app = module.exports = require('express')();
 const registerServices = require('../services/registerKafilaServices')
 const {userAuth}=require('../middleware/auth')
-app.use('/mandav', require('express').static('kafila/register.html'))
+app.use('/', require('express').static('kafila/register.html'))
 
 app.get('/getall',userAuth, (req, res) => {
     (async () => {

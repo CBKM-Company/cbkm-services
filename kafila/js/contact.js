@@ -34,7 +34,7 @@ function sendContact(){
 
 function getContact(){
 
-            axios.defaults.headers.common['appID'] = 'kafilatest11567282175515'
+            axios.defaults.headers.common['appID'] = 'KafilaV11567374237927'
             axios.get('/contact/getall')
             .then(res=>{
                 console.log(res.data)
@@ -50,7 +50,7 @@ function getContact(){
 
 function getRegister(){
 
-    axios.defaults.headers.common['appID'] = 'kafilatest11567282175515'
+    axios.defaults.headers.common['appID'] = 'KafilaV11567374237927'
     axios.get('/register/getall')
     .then(res=>{
         console.log(res.data)

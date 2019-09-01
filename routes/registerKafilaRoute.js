@@ -1,6 +1,7 @@
 const app = module.exports = require('express')();
 const registerServices = require('../services/registerKafilaServices')
 const {userAuth}=require('../middleware/auth')
+
 app.get('/getall',userAuth, (req, res) => {
     (async () => {
         try {
@@ -20,9 +21,11 @@ app.get('/getall',userAuth, (req, res) => {
 app.post('/save',userAuth, (req, res) => {
     (async () => {
         try {
-            //registerPromise = await registerServices.saveContact(req.body);
-            //res.json({ success: true, data: registerPromise })
-            console.log(req.body)
+            req.body.tripID="MANDAV150919"
+            registerPromise = await registerServices.saveRegister(req.body);
+
+            console.log(registerPromise)
+res.redirect('/kafila/thanx')            
         }
         catch (e) {
             console.log(e)

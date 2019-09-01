@@ -16,7 +16,7 @@ function sendContact(){
             document.getElementById('name').value="";
     document.getElementById('message').value="";
     document.getElementById('cnt').value="";
-            window.location.href='/kafila';
+            // window.location.href='/kafila';
         })
         .catch(e=>{
             console.log(e)
@@ -29,3 +29,37 @@ function sendContact(){
     }
     
 }
+
+
+
+function getContact(){
+
+            axios.defaults.headers.common['appID'] = 'kafilatest11567282175515'
+            axios.get('/contact/getall')
+            .then(res=>{
+                console.log(res.data)
+            
+            })
+            .catch(e=>{
+                console.log(e)
+            })
+
+    
+}
+
+
+function getRegister(){
+
+    axios.defaults.headers.common['appID'] = 'kafilatest11567282175515'
+    axios.get('/register/getall')
+    .then(res=>{
+        console.log(res.data)
+    
+    })
+    .catch(e=>{
+        console.log(e)
+    })
+
+
+}
+

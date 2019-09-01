@@ -26,7 +26,7 @@ app.post('/save',userAuth, (req, res) => {
             registerPromise = await registerServices.saveRegister(req.body);
 
             console.log(registerPromise)
-res.redirect('/kafila/thanx')            
+res.redirect('/thanx')            
         }
         catch (e) {
             console.log(e)

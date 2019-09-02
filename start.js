@@ -23,7 +23,11 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     console.log("connected to mongo")
 });
+// app.use('*', require('express').static('kafila/index.html'))
 
+app.get('*', function(req, res){
 
+    res.status(404).redirect('/');
+  });
 const server = app.listen(process.env.PORT || 5000, () => {
 });

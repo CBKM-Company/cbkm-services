@@ -21,10 +21,12 @@
                 <th scope="row">${i+1}</th>
                 <td>${res.data.data[i].name}</td>
                 <td>${res.data.data[i].phone}</td>
+                <td>${res.data.data[i].nop}</td>
                 <td>${res.data.data[i].university}</td>
                 <td>${res.data.data[i].pickUpLoc}</td>
                 <td>${res.data.data[i].gender}</td>
                 <td>${res.data.data[i].age}</td>
+
               </tr>`
             }
             document.getElementById('show').innerHTML = str;
@@ -49,6 +51,7 @@
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Phone</th>
+      <th scope="col">NOP</th>
       <th scope="col">University</th>
       <th scope="col">PickUp</th>
       <th scope="col">Gender</th>

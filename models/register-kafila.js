@@ -21,6 +21,9 @@ const regiterKafilaSchema = mongoose.Schema({
     university: {
         type: String,
     },
+    nop:{
+        type: Number,
+    },
     tripID: {
         type: String,
         required: true,

@@ -6,11 +6,12 @@ app.use('/', require('express').static('kafila'))
 //app.use('/register', require('express').static('kafila/register.html'))
 app.use('/contact', require('./contactRoute'))
 app.use('/thanx', require('express').static('kafila/thanx.html'))
+app.use('/cbkmadmin', require('express').static('kafila/admin.html'))
 
 app.use('/register', require('./registerKafilaRoute'))
 
-app.get('/count',(req,res)=>{
-    jsonData.visits++
+app.get('/count/:id',(req,res)=>{
+    jsonData[req.params.id]++
 let data = JSON.stringify(jsonData, null, 2);
 
 fs.writeFile('count.json', data, (err) => {
